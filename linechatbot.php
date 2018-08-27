@@ -23,7 +23,7 @@ $text = $event->message->text;
 
 if (preg_match(“/Ph/”, $text)) and preg_match(“/PH/”, $text)) {     //หากในแชตที่ส่งมามีคำว่า เปิดทีวี ก็ให้ส่ง mqtt ไปแจ้ง server เราครับ
 if ($mqtt->connect()) {
-$mqtt->publish(“/label”,”$text”); // ตัวอย่างคำสั่งเปิดทีวีที่จะส่งไปยัง mqtt server
+$mqtt->publish(“label”,”$text”); // ตัวอย่างคำสั่งเปิดทีวีที่จะส่งไปยัง mqtt server
 $mqtt->close();
 }
 $text = “เปลี่ยนค่า PH ให้แล้วครับ”;
@@ -31,7 +31,7 @@ $text = “เปลี่ยนค่า PH ให้แล้วครับ�
 
 if (preg_match(“/Cl/”, $text) and preg_match(“/CL/”, $text)) {
 if ($mqtt->connect()) {
-$mqtt->publish(“/label”,”$text”);
+$mqtt->publish(“label”,”$text”);
 $mqtt->close();
 }
 $text = “เปลี่ยนค่าคลอลีนให้แล้วครับ”;
@@ -39,7 +39,7 @@ $text = “เปลี่ยนค่าคลอลีนให้แล้ว
 
 if (preg_match(“/Tu/”, $text) and preg_match(“/TU/”, $text)) {
 if ($mqtt->connect()) {
-$mqtt->publish(“/label”,”$text”);
+$mqtt->publish(“label”,”$text”);
 $mqtt->close();
 }
 $text = “เปลี่ยนค่าความขุ่นให้แล้วครับ”;
