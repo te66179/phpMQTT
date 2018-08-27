@@ -5,7 +5,7 @@ use \LINE\LINEBot;
 
 require(“phpMQTT.php”);
 
-$mqtt = new phpMQTT(“m10.cloudmqtt.com”, 27343, “label”); //เปลี่ยน www.yourmqttserver.com ไปที่ mqtt server ที่เราสมัครไว้นะครับ
+$mqtt = new phpMQTT(“m10.cloudmqtt.com”, 27343, “/label”); //เปลี่ยน www.yourmqttserver.com ไปที่ mqtt server ที่เราสมัครไว้นะครับ
 
 $token = “iGDxZmG08RKEvQYAvVsWEHXUiVpi1oQTrtgJntiKIz/Oxd7WFbEHNhc8YP6acrHlc9lKFGBkXc4vE/tv97bjigKMgqkAYLffV7qULxM24BmWHZmmd72KO5KOxW5wKhwwv3hQ1j5OSEJd/MPHJ+khDgdB04t89/1O/w1cDnyilFU=”; //นำ token ที่มาจาก line developer account ของเรามาใส่ครับ
 
